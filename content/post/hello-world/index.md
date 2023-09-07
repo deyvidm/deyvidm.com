@@ -1,20 +1,28 @@
 ---
 title: Hello World
-description: Welcome to Hugo Theme Stack
+description: How this site was built
 slug: hello-world
 date: 2022-03-06 00:00:00+0000
 image: cover.jpg
 categories:
-    - Example Category
+    - huh?
 tags:
-    - Example Tag
+    - tag you're it
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 
-Welcome to Hugo theme Stack. This is your first post. Edit or delete it, then start writing!
+# Witness me! 
+![repo](1-repo.png)
+![localhost](1-initial.png)
 
-For more information about this theme, check the documentation: https://stack.jimmycai.com/
+This is what our project looks like initially. 
+It's a pretty good template! 
+This runs locally just fine, so let's see how Amplify will handle it.
 
-Want a site like this? Check out [hugo-theme-stack-stater](https://github.com/CaiJimmy/hugo-theme-stack-starter)
+### Going to AWS
 
-> Photo by [Pawel Czerwinski](https://unsplash.com/@pawel_czerwinski) on [Unsplash](https://unsplash.com/)
+
+### Uh build settings? 
+
+After making a new app and pointing a 
+![Sick Build Settings](1.png>)
