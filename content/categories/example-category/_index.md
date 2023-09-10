@@ -1,6 +1,6 @@
 ---
-title: Example Category
-description: A description of this category
+title: Projectoids
+description: Flying garbage polluting the webinet. 
 image:
 
 # Badge style
