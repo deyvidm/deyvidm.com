@@ -4,9 +4,9 @@ mainSections = ["post"]
 rssFullContent = true
 favicon = "/favicon.png"
 
-[footer]
-since = 2020
-customText = ""
+#[footer]
+#since = 2020
+#customText = ""
 
 [dateFormat]
 published = "Jan 02, 2006"

@@ -9,6 +9,7 @@ categories:
 tags:
     - tag you're it
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)
+draft: true
 ---
 
 # Witness me! 
