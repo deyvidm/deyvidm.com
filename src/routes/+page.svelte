@@ -6,7 +6,7 @@
 <div class="hero min-h-screen bg-base-200">
   <div class="hero-content flex-col lg:flex-row">
     <!-- <img src="/src/static/pro-blank.png" class="max-w-sm rounded-lg shadow-2xl" /> -->
-    <img src="/src/static/pro.png" class="max-w-sm rounded-lg" />
+    <img src="/public/pro.png" alt="" class="max-w-sm rounded-lg" />
     <div>
       <div class="badge badge-outline">Hi, I'm Deyvid! 👋</div>
       <h1 class="text-5xl font-bold">Versatile Backend Developer with a Passion for Precision and Leadership.</h1>
