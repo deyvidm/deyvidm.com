@@ -4,7 +4,9 @@
 </script>
 
 <div class="container mx-auto">
-    <div class="container flex justify-around gap-8 items-center p-4 bg-base-200 rounded-lg">
+    <div
+        class="container flex justify-around gap-8 items-center p-4 bg-base-200 rounded-lg"
+    >
         <!-- <img src="/src/static/pro-blank.png" class="max-w-sm rounded-lg shadow-2xl" /> -->
         <img src="/pro.png" alt="" class="max-w-60 rounded-lg" />
         <div class="">
@@ -21,8 +23,7 @@
         </div>
     </div>
 
-    <!-- <div class="container mx-auto bg-base-300 mt-10 p-4 rounded-lg">
-        <h1>Portfolio</h1>
+    <div class="container mx-auto bg-base-200 mt-10 p-4 rounded-lg">
         <PortfolioCard />
-    </div> -->
+    </div>
 </div>
