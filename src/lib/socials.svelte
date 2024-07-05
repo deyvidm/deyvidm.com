@@ -61,7 +61,7 @@
 
     <!-- Email -->
     <a
-        href="mailto:your_email@example.com"
+        href="mailto:deyvidmitkov@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
         class="flex items-center"
@@ -91,8 +91,8 @@
         </button>
     </a>
 
-    <!-- Email -->
-    <a
+    <!-- Text -->
+    <!-- <a
         href="/"
         target="_blank"
         rel="noopener noreferrer"
@@ -121,5 +121,5 @@
                 </svg>
             </span>
         </button>
-    </a>
+    </a> -->
 </div>
