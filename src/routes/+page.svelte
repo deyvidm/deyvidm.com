@@ -35,7 +35,7 @@
         </div>
 
         <div class="container flex flex-wrap justify-between">
-            <PortfolioCard title="Portfolio" />
+            <PortfolioCard title="Plantus 🌵" tagline="A snappy mobile-first inventory browser for Terra Greenhouses's latest offerings." image="/projects/plantus-card.png" link="https://plants.deyvid.ca"/>
             <PortfolioCard title="Plan" />
             <PortfolioCard title="Plang" />
         </div>
