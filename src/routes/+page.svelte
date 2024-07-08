@@ -22,8 +22,22 @@
             <Socials />
         </div>
     </div>
+    <div class="container mx-auto bg-base-200 p-40 rounded-lg mt-10"></div>
 
-    <div class="container mx-auto bg-base-200 mt-10 p-4 rounded-lg">
-        <PortfolioCard />
+    <div class="contaienr flex flex-col mx-auto bg-base-200 mt-10 p-4 rounded-lg ">
+        
+        <div class="container"> 
+            <h1 class="mb-4 text-3xl font-extrabold">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+                    Recent Projects
+                </span>
+            </h1>
+        </div>
+
+        <div class="container flex flex-wrap justify-between">
+            <PortfolioCard title="Portfolio" />
+            <PortfolioCard title="Plan" />
+            <PortfolioCard title="Plang" />
+        </div>
     </div>
 </div>
