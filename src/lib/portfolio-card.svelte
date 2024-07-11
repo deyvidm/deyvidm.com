@@ -7,7 +7,7 @@
 
 <a href={link}>
     <div class="card bg-base-100 shadow-xl">
-        <div class="card-body">
+        <div class="card-body min-h-40">
             <h2 class="card-title">{title}</h2>
             <p>{tagline}</p>
         </div>
