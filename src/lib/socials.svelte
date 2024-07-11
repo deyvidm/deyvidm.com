@@ -3,7 +3,7 @@
     import { ChatBubbleLeftRight, Envelope } from "@steeze-ui/heroicons";
 </script>
 
-<div class="flex space-x-10 justify-center">
+<div class="flex space-x-10  justify-center sm:justify-start">
     <!-- LinkedIn -->
     <a
         href="https://linkedin.com/in/deyvid-mitkov"
