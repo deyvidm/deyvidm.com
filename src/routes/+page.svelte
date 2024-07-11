@@ -36,7 +36,7 @@
 
         <div class="container flex flex-wrap justify-between">
             <PortfolioCard title="Plantus 🌵" tagline="A snappy mobile-first inventory browser for Terra Greenhouses's latest offerings." image="/projects/plantus-card.png" link="https://plants.deyvid.ca"/>
-            <PortfolioCard title="Plan" />
+            <PortfolioCard title="WhenFight 🏆" tagline="Mobile-friendly BJJ tournament schedule scraper and minimal UI for competition day." image="/projects/whenfight-card.png" link="http://whenfight.deyvid.ca"/>
             <PortfolioCard title="Plang" />
         </div>
     </div>
