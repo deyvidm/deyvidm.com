@@ -5,8 +5,8 @@
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div
-        class="container flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16 p-4 bg-base-200 rounded-lg"
-    >
+        class="container flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16 p-4  rounded-lg"
+    >   
         <!-- <img src="/src/static/pro-blank.png" class="max-w-sm rounded-lg shadow-2xl" /> -->
         <img src="/pro.png" alt="" class="max-w-60 rounded-lg md:max-w-xs" />
         <div class="flex flex-col gap-4">
@@ -22,10 +22,12 @@
             <Socials />
         </div>
     </div>
-    <div class="container mx-auto bg-base-200 p-40 rounded-lg mt-10 md:mt-16"></div>
+
+    <div class="divider m-16"></div>
+
+    <!-- <div class="container mx-auto bg-base-200 p-40 rounded-lg mt-10 md:mt-16"></div> -->
 
     <div class="container flex flex-col mx-auto bg-base-200 mt-10 p-4 rounded-lg md:p-8">
-        
         <div class="container"> 
             <h1 class="mb-4 text-3xl font-extrabold md:text-5xl">
                 <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
