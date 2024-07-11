@@ -36,7 +36,7 @@
 
         <div class="container grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
             <PortfolioCard title="Plantus 🌵" tagline="A snappy mobile-first inventory browser for Terra Greenhouses's latest offerings." image="/projects/plantus-card.png" link="https://plants.deyvid.ca"/>
-            <PortfolioCard title="WhenFight 🏆" tagline="Mobile-friendly BJJ tournament schedule scraper and minimal UI for competition day." image="/projects/whenfight-card.png" link="https://whenfight.deyvid.ca"/>
+            <PortfolioCard title="WhenFight 🏆" tagline="MVP UI wrapper and BJJ tournament schedule scraper for competition day." image="/projects/whenfight-card.png" link="https://whenfight.deyvid.ca"/>
             <!-- <PortfolioCard title="Plang" /> -->
         </div>
     </div>
