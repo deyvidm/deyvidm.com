@@ -1,6 +1,6 @@
 <div class="navbar bg-base-200">
   <div class="navbar-start">
-    <!-- <a class="btn btn-ghost text-xl">  :)  </a> -->
+    <a href="/" class="btn btn-outline text-xl">  DM  </a>
   </div>
 
   <div class="navbar-end">
@@ -19,7 +19,7 @@
           d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
         /></svg
       >
-      <input type="checkbox" value="light" class="toggle theme-controller" />
+      <input type="checkbox" value="dark" class="toggle theme-controller" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"
