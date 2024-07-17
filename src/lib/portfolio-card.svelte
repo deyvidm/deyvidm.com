@@ -9,7 +9,7 @@
 <a href={link}>
     <div class="card lg:card-side bg-base-100 shadow-xl p-6 rounded-lg flex flex-col lg:flex-row">
         <figure class="w-full lg:w-1/3 mb-4 lg:mb-0">
-            <img class="rounded-lg w-full" src={image} />
+            <img alt="product-img" class="rounded-lg w-full" src={image} />
         </figure>
         <div class="flex flex-col justify-between w-full lg:w-2/3">
             <div class="card-body p-4 ">
