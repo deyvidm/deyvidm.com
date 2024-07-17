@@ -1,26 +1,35 @@
 <script>
-    export let projectTitle = "Plantus 🌵";
-    export let projectTagline = "A small UI wrpaper around Terra Greenhouses' latest inventory.";
-    export let overview = "This project is designed to empower Sales Associates with the latest info on product pricing and inventory. I designed the project after observing Sales Associates struggle to navigate Terra's website while addressing customer needs. The project has received a lot of positive feedback and seen rapid adoption by brand new Ssasonal hires.";
-    export let features = [
+    let demoLink = "https://plants.deyvid.ca";
+    let gitLInk = "https://github.com/deyvidm/pterra";
+
+    let projectTitle = "Plantus 🌵";
+    let projectTagline = "A small UI wrpaper around Terra Greenhouses' latest inventory.";
+    let overview = "This project is designed to empower Sales Associates with the latest info on product pricing and inventory. I designed the project after observing Sales Associates struggle to navigate Terra's website while addressing customer needs. The project has received a lot of positive feedback and seen rapid adoption by brand new Seasonal hires.";
+
+    let projectStructure = ""
+
+    let features = [
       "Clutter-free user experience",
       "Mobile-first design for on-the-go use by Sales Associates",
       "Unparalleled performance",
       "Intuitive search functionality and filtering",
       "Product links to more in-depth information",
+      "Feedback page with optional contact form",
     ];
-    export let technologies = [
-      "Svelte",
+    let technologies = [
+      "SvelteKit",
       "Tailwind CSS",
       "DaisyUI",
       "GoLang (Asynq)",
-      "SQLite"
+      "SQLite",
+      "Docker",
+      "docker-compose",
     ];
-    export let roadmap = [
-      { phase: "Phase 1", details: "Initial project setup and basic features implementation." },
-      { phase: "Phase 2", details: "Adding user authentication and profile management." },
-      { phase: "Phase 3", details: "Integrating real-time data updates and notifications." },
-      { phase: "Phase 4", details: "Optimizing performance and preparing for deployment." }
+    let roadmap = [
+      { phase: "Milestone 1", details: "Automated scraping runs of Terra Greenhouses' inventory. Currently each run is configured and launched manually." },
+      { phase: "Mileonstone 1.1", details: "Automated container CI/CD pipeline. Current deployment require manual approval." },
+      { phase: "Milestone 2", details: "Frontend GPT integration: upload plant image and automatically navigate to product page." },
+      { phase: "Milestone 3", details: "GPT Scraper integration: provide off-season care instructions tailored to local seasonal conditions." },
     ];
   </script>
   
@@ -34,6 +43,16 @@
     <section class="mb-12">
       <h1 class="text-4xl font-bold text-center mb-4">{projectTitle}</h1>
       <p class="text-xl text-center mb-6">{projectTagline}</p>
+      
+      <div class="mb-12 card bg-base-100">
+        <div class="card-body">
+            <div class="opacity-90 flex justify-center gap-4 mt-4 lg:ml-4 space-x-4">
+                <a href={demoLink} class="btn btn-outline bg-green-500 text-white hover:bg-green-700">Live Demo</a>
+                <a href={gitLInk} class="btn btn-outline text-black text-white hover:bg-gray-700">Github Link</a>
+            </div>
+        </div>  
+      </div>
+
       <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
           <h2 class="card-title text-2xl">Overview</h2>
@@ -59,9 +78,9 @@
       <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
           <h2 class="card-title text-2xl">Technologies Used</h2>
-          <div class="flex flex-wrap space-x-2">
+          <div class="flex flex-wrap space-x-2 mt-4">
             {#each technologies as tech}
-              <span class="badge badge-primary">{tech}</span>
+              <span class="badge badge-primary m-1">{tech}</span>
             {/each}
           </div>
         </div>
@@ -86,7 +105,7 @@
       <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
           <h2 class="card-title text-2xl">Contact</h2>
-          <p>If you have any questions or would like to discuss this project further, please don't hesitate to contact me at <a href="mailto:your-email@example.com" class="text-blue-500 underline">your-email@example.com</a>.</p>
+          <p>If you have any questions or would like to discuss this project further, please don't hesitate to contact me at <a href="mailto:your-email@example.com" class="text-blue-500 underline">deyvidmitkov@gmail.com</a>.</p>
         </div>
       </div>
     </section>
