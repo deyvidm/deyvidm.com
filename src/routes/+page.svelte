@@ -31,7 +31,7 @@
         <div class="container"> 
             <h1 class="mb-4 text-3xl font-extrabold md:text-5xl">
                 <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
-                    Recent Projects
+                    Recent Projects That Others Use
                 </span>
             </h1>
         </div>
