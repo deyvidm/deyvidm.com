@@ -1,20 +1,17 @@
 <script>
-    let demoLink = "https://plants.deyvid.ca";
-    let gitLInk = "https://github.com/deyvidm/pterra";
+    let demoLink = "https://whenfight.deyvid.ca";
+    let gitLInk = "https://github.com/deyvidm/whenfight.ca";
 
-    let projectTitle = "Plantus 🌵";
-    let projectTagline = "A small UI wrapper around Terra Greenhouses' latest inventory.";
-    let overview = "This project is designed to empower Sales Associates with the latest info on product pricing and inventory. I designed the project after observing Sales Associates struggle to navigate Terra's website while addressing customer needs. The project has received a lot of positive feedback and seen rapid adoption by brand new Seasonal hires.";
+    let projectTitle = "WhenFight 🏆";
+    let projectTagline = "A UI wrapper for Smoothcomp (BJJ); tracking BJJ tournament matchches on competition day. ";
+    let overview = " is the leading tournament software for organizing combat sports. WhenFight is a UI wrapper for Smoothcomp (BJJ) that enables users to track grappling matches on tournament day for any participant of Current BJJ, the club I train with. ";
 
     let projectStructure = ""
 
     let features = [
-      "Clutter-free user experience",
-      "Mobile-first design for on-the-go use by Sales Associates",
-      "Unparalleled performance",
-      "Intuitive search functionality and filtering",
-      "Product links to more in-depth information",
-      "Feedback page with optional contact form",
+    "Significantly improved mobile user experience with minimal performance overhead",
+    "Selectable competitor schedule and history for each match",
+    "Toggle visibility of finished matches",
     ];
     let technologies = [
       "AWS (EC2)",
@@ -23,17 +20,15 @@
       "Nginx",
       "GoLang Server",
       "Asynq Task Queue (Golang)",
-      "SQLite",
+      "Redis",
       "SvelteKit",
       "Tailwind CSS",
       "DaisyUI",
     ];
     let roadmap = [
-      { phase: "Milestone 1", details: "Automated scraping runs of Terra Greenhouses' inventory. Currently each run is configured and launched manually." },
-      { phase: "Milestone 1.1", details: "Scraper integration: Launch a scraper run (live inventory update) from the frontend." },
-      { phase: "Milestone 2", details: "Automated container CI/CD pipeline. Current deployment require manual approval." },
-      { phase: "Milestone 3", details: "Frontend GPT integration: upload plant image and automatically navigate to product page." },
-      { phase: "Milestone 4", details: "GPT Scraper integration: provide off-season care instructions tailored to local seasonal conditions." },
+      { phase: "Milestone 1", details: "Adjustable tournament selection: Currently preconfigured for 2023" },
+      { phase: "Milestone 1.1", details: "Dynamic club selection" },
+      { phase: "Milestone 2", details: "Automated CI/CD pipeline. Current deployment require manual approval." },
     ];
   </script>
   
@@ -60,7 +55,7 @@
       <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
           <h2 class="card-title text-2xl">Overview</h2>
-          <p>{overview}</p>
+          <p><a href="https://smoothcomp.com/en">Smoothcomp</a>{overview}</p>
         </div>
       </div>
     </section>
@@ -93,30 +88,31 @@
     </section>
   
     <div class="divider"></div>
-
+    
     <section class="mb-12">
-        <h2 class="text-2xl font-semibold mb-4">Project Structure</h2>
-        <p>The technological architecture of this project is built around three main components: the SvelteKit server, the Golang backend server, and the Golang task queue scraper. Each of these components plays a crucial role in ensuring the project runs smoothly and efficiently.</p>
+        <h2 class="text-2xl font-semibold mb-4">Technological Structure</h2>
+        <p>The technological architecture of the `WhenFight` project is built around three main components: the SvelteKit frontend, the Golang backend, and the Redis data cache. Each component plays a crucial role in providing a seamless user experience for managing and viewing BJJ tournament data.</p>
+    
     
         <div class="my-8">
-          <!-- Space for Diagram -->
-          <div class="border rounded-lg p-4 bg-gray-100">
-            <img src="/plantus-diagram.png" alt="diagram">
+            <!-- Space for Diagram -->
+            <div class="border rounded-lg p-4 bg-gray-100">
+              <img src="/whenfight-diagram.png" alt="diagram">
+            </div>
           </div>
-        </div>
     
         <div class="card bg-base-100 shadow-xl mb-8">
           <div class="card-body">
-            <h3 class="card-title text-xl">SvelteKit Server</h3>
-            <p>The SvelteKit server handles the frontend, providing a dynamic and responsive user interface. It interacts with the backend server to fetch and display data to users in real-time.</p>
+            <h3 class="card-title text-xl">SvelteKit Frontend</h3>
+            <p>The SvelteKit frontend queries the backend for competition and tournament match data, including information about winners, losers, match dates, times, mat locations, and end results.</p>
             <ul class="list-disc ml-5 mt-2">
               <li><strong>Technology:</strong> <a href="https://kit.svelte.dev/" class="text-blue-500 underline">SvelteKit</a></li>
-              <li><strong>Role:</strong> Manages client-side rendering and routing.</li>
+              <li><strong>Role:</strong> Manages the user interface and client-side rendering.</li>
               <li><strong>Features:</strong>
                 <ul class="list-disc ml-5">
-                  <li>Dynamic and reactive user interface</li>
-                  <li>Efficient state management</li>
-                  <li>Easy integration with the backend via API calls</li>
+                  <li>Dynamic and responsive user interface</li>
+                  <li>Fetches match data from the backend in real-time</li>
+                  <li>Displays comprehensive tournament details</li>
                 </ul>
               </li>
             </ul>
@@ -125,16 +121,16 @@
     
         <div class="card bg-base-100 shadow-xl mb-8">
           <div class="card-body">
-            <h3 class="card-title text-xl">Golang Backend Server</h3>
-            <p>The Golang backend server is responsible for handling business logic, managing the database, and serving API requests. It acts as the core engine driving the application's functionality.</p>
+            <h3 class="card-title text-xl">Golang Backend</h3>
+            <p>The Golang backend uses Redis as a data cache. It first checks Redis for participant data and, if the data is missing, it scrapes information from Smoothcomp.</p>
             <ul class="list-disc ml-5 mt-2">
               <li><strong>Technology:</strong> <a href="https://golang.org/" class="text-blue-500 underline">Golang</a></li>
-              <li><strong>Role:</strong> Processes client requests and manages data.</li>
+              <li><strong>Role:</strong> Handles business logic, data retrieval, and interaction with the data cache.</li>
               <li><strong>Features:</strong>
                 <ul class="list-disc ml-5">
                   <li>High performance and concurrency</li>
-                  <li>RESTful API design</li>
-                  <li>Secure and scalable architecture</li>
+                  <li>Checks Redis cache before scraping data</li>
+                  <li>Scrapes data from Smoothcomp if not found in Redis</li>
                 </ul>
               </li>
             </ul>
@@ -143,16 +139,16 @@
     
         <div class="card bg-base-100 shadow-xl mb-8">
           <div class="card-body">
-            <h3 class="card-title text-xl">Golang Task Queue Scraper</h3>
-            <p>The task queue scraper, built with Golang, runs in the background to scrape data from various sources and feed it into the system. It uses a task queue to manage and process scraping tasks efficiently.</p>
+            <h3 class="card-title text-xl">Redis Data Cache</h3>
+            <p>Redis is used to store match participant data for 10 seconds. When the data expires, it is expunged from the cache.</p>
             <ul class="list-disc ml-5 mt-2">
-              <li><strong>Technology:</strong> <a href="https://github.com/hibiken/asynq" class="text-blue-500 underline">Asynq</a></li>
-              <li><strong>Role:</strong> Asynchronous task processing for web scraping.</li>
+              <li><strong>Technology:</strong> <a href="https://redis.io/" class="text-blue-500 underline">Redis</a></li>
+              <li><strong>Role:</strong> Provides a temporary data cache for match participant data.</li>
               <li><strong>Features:</strong>
                 <ul class="list-disc ml-5">
-                  <li>Efficient task scheduling and execution</li>
-                  <li>Fault-tolerant and scalable</li>
-                  <li>Seamless integration with the backend server</li>
+                  <li>Stores data temporarily for quick retrieval</li>
+                  <li>Expunges data after 10 seconds</li>
+                  <li>Reduces the load on the backend and Smoothcomp</li>
                 </ul>
               </li>
             </ul>
@@ -165,11 +161,12 @@
             <ul class="list-disc ml-5 mt-2">
               <li><a href="https://kit.svelte.dev/" class="text-blue-500 underline">SvelteKit</a></li>
               <li><a href="https://golang.org/" class="text-blue-500 underline">Golang</a></li>
-              <li><a href="https://github.com/hibiken/asynq" class="text-blue-500 underline">Asynq</a></li>
+              <li><a href="https://redis.io/" class="text-blue-500 underline">Redis</a></li>
             </ul>
           </div>
         </div>
       </section>
+        
 
     <section class="mb-12">
       <div class="card bg-base-100 shadow-xl">
