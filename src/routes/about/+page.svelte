@@ -13,6 +13,22 @@
     modalOpen = false;
     modalImageSrc = '';
   }
+
+  function handleKeyDown(event) {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  }
+
+
+  onMount(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  });
+
+
 </script>
   
   <main class="container mx-auto p-8">
@@ -66,12 +82,12 @@
           </div>
           
           {#if modalOpen}
-            <div class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-              <div class="bg-white rounded-lg shadow-lg">
-                <button class="btn btn-sm btn-circle absolute right-2 top-2" on:click={closeModal}>✕</button>
-                <img src={modalImageSrc} alt="Full resolution" class="rounded-lg" />
-              </div>
+          <div class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" on:click={closeModal}>
+            <div class="bg-white rounded-lg shadow-lg p-1  max-w-7xl  w-full mx-4" on:click|stopPropagation>
+              <button class="btn btn-sm btn-circle absolute right-2 top-2" on:click={closeModal}>✕</button>
+              <img src={modalImageSrc} alt="Full resolution" class="rounded-lg mx-auto" />
             </div>
+          </div>
           {/if}
 
       </div>
