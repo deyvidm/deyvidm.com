@@ -32,6 +32,10 @@ let roadmap = [{
     },
     {
         phase: "Milestone 2",
+        details: "Container restructure: reduce exposed services and utilize internal docker networks"
+    },
+    {
+        phase: "Milestone 2.1",
         details: "Automated CI/CD pipeline. Current deployments require manual approval."
     },
 ];
