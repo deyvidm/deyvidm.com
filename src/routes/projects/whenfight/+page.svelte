@@ -64,7 +64,7 @@ let roadmap = [{
     </section>
 
     <div role="tablist" class="tabs tabs-lifted">
-        <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Overview"  checked="checked" >
+        <input type="radio" name="whenfight_tabs" role="tab" class="tab" aria-label="Overview"  checked="checked" />
 
         <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
 
@@ -93,7 +93,7 @@ let roadmap = [{
 
         </div>
 
-        <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tech" />
+        <input type="radio" name="whenfight_tabs" role="tab" class="tab" aria-label="Tech" />
         <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
             <section class="mb-12">
                 <div class="card bg-base-100 shadow-xl">
@@ -181,7 +181,9 @@ let roadmap = [{
 
                 </div>
             </section>
-
+        </div>
+        <input type="radio" name="whenfight_tabs" role="tab" class="tab" aria-label="Roadmap"  />
+        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
             <section class="mb-12">
                 <div class="card bg-base-100 shadow-xl">
                     <div class="card-body">
@@ -198,10 +200,10 @@ let roadmap = [{
         </div>
     </div>
 
-        <div class="mt-40 card bg-base-100 ">
-            <div class="card-body">
-                <h2 class="card-title text-xl">Contact</h2>
-                <p>If you have any questions or would like to discuss this project further, please don't hesitate to contact me at <a href="mailto:your-email@example.com" class="text-blue-500 underline">deyvidmitkov@gmail.com</a>.</p>
-            </div>
+    <div class="mt-40 card bg-base-100 ">
+        <div class="card-body">
+            <h2 class="card-title text-xl">Contact</h2>
+            <p>If you have any questions or would like to discuss this project further, please don't hesitate to contact me at <a href="mailto:your-email@example.com" class="text-blue-500 underline">deyvidmitkov@gmail.com</a>.</p>
         </div>
+    </div>
 </main>
