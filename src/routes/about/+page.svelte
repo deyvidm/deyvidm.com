@@ -1,5 +1,19 @@
 <script>
-  </script>
+  import { onMount } from 'svelte';
+
+  let modalOpen = false;
+  let modalImageSrc = '';
+
+  function openModal(src) {
+    modalImageSrc = src;
+    modalOpen = true;
+  }
+
+  function closeModal() {
+    modalOpen = false;
+    modalImageSrc = '';
+  }
+</script>
   
   <main class="container mx-auto p-8">
     <section class="mb-12 text-center">
@@ -31,25 +45,35 @@
           <h2 class="card-title text-2xl mb-4">Outisde of Work</h2>
           <p class="text-lg mb-6">Love to scope out the freshest, warmest sunsets with my dog Finn. We love finding cool flowers and neat bugs.</p>
           
-<div class="flex flex-col items-center gap-4">
-  <!-- First Row -->
-  <div class="w-full">
-    <img src="/about_pics/finn.jpg" alt="dog" class="rounded-lg shadow-md w-full h-full object-cover" />
-  </div>
+          <div class="flex flex-col items-center gap-4">
+            <!-- First Row -->
+            <div class="w-full h-96">
+              <img src="/about_pics/finn.jpg" alt="dog" class="rounded-lg shadow-md w-full h-full object-cover cursor-pointer" on:click={() => openModal('/about_pics/finn.jpg')} />
+            </div>
+          
+            <!-- Second Row -->
+            <div class="flex w-full gap-4 h-64">
+              <img src="/about_pics/sunset-1.jpg" alt="sunset 1" class="rounded-lg shadow-md w-1/2 h-full object-cover cursor-pointer" on:click={() => openModal('/about_pics/sunset-1.jpg')} />
+              <img src="/about_pics/sunset-2.jpg" alt="sunset 2" class="rounded-lg shadow-md w-1/2 h-full object-cover cursor-pointer" on:click={() => openModal('/about_pics/sunset-2.jpg')} />
+            </div>
+          
+            <!-- Third Row -->
+            <div class="flex w-full gap-4 h-64">
+              <img src="/about_pics/bego.jpg" alt="begonia" class="rounded-lg shadow-md w-1/3 h-full object-cover cursor-pointer" on:click={() => openModal('/about_pics/bego.jpg')} />
+              <img src="/about_pics/hydra.jpg" alt="hydrangea" class="rounded-lg shadow-md w-1/3 h-full object-cover cursor-pointer" on:click={() => openModal('/about_pics/hydra.jpg')} />
+              <img src="/about_pics/grasshopper.jpg" alt="iris" class="rounded-lg shadow-md w-1/3 h-full object-cover cursor-pointer" on:click={() => openModal('/about_pics/grasshopper.jpg')} />
+            </div>
+          </div>
+          
+          {#if modalOpen}
+            <div class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+              <div class="bg-white rounded-lg shadow-lg">
+                <button class="btn btn-sm btn-circle absolute right-2 top-2" on:click={closeModal}>✕</button>
+                <img src={modalImageSrc} alt="Full resolution" class="rounded-lg" />
+              </div>
+            </div>
+          {/if}
 
-  <!-- Second Row -->
-  <div class="flex w-full gap-4 h-64">
-    <img src="/about_pics/sunset-1.jpg" alt="sunset 1" class="rounded-lg shadow-md w-1/2 h-full object-cover" />
-    <img src="/about_pics/sunset-2.jpg" alt="sunset 2" class="rounded-lg shadow-md w-1/2 h-full object-cover" />
-  </div>
-
-  <!-- Third Row -->
-  <div class="flex w-full gap-4 h-64">
-    <img src="/about_pics/bego.jpg" alt="begonia" class="rounded-lg shadow-md w-1/3 h-full object-cover" />
-    <img src="/about_pics/hydra.jpg" alt="hydrangea" class="rounded-lg shadow-md w-1/3 h-full object-cover" />
-    <img src="/about_pics/grasshopper.jpg" alt="iris" class="rounded-lg shadow-md w-1/3 h-full object-cover" />
-  </div>
-</div>
       </div>
     </section>
 
