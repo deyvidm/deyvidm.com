@@ -59,7 +59,7 @@
       <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-4">Outisde of Work</h2>
-          <p class="text-lg mb-6">Love to scope out the freshest, warmest sunsets with my dog Finn. We love finding cool flowers and neat bugs.</p>
+          <p class="text-lg mb-6">Love to scope out the freshest, warmest sunsets with my dog Finn. We love finding cool flowers and neat bugs, and enjoying all of nature's generous bounties.</p>
           
           <div class="flex flex-col items-center gap-4">
             <!-- First Row -->
